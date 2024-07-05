@@ -25,6 +25,11 @@ const corsOptions = {
 
 app.use(cors(corsOptions))
 
+app.use(cors({
+  origin: 'https://blog-website-nu-42.vercel.app', // Replace with your frontend URL
+  credentials: true // Required for cookies, authorization headers with HTTPS
+}));
+
 app.use(
   cors({
     origin: [process.env.FRONTEND_URL],
