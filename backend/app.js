@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 });
 
 const corsOptions = {
-  origin: 'https://blog-website-three-lake.vercel.app', // Update this to match your frontend URL
+  origin: 'https://blog-website-bay-six.vercel.app', // Update this to match your frontend URL
   credentials: true,
 };
 
