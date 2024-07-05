@@ -18,14 +18,12 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors({
-  origin: 'https://blog-website-nu-42.vercel.app', // Replace with your frontend URL
-  credentials: true // Required for cookies, authorization headers with HTTPS
-}));
+const corsOptions = {
+  origin: 'https://blog-website-three-lake.vercel.app', // Update this to match your frontend URL
+  credentials: true,
+};
 
 app.use(cors(corsOptions))
-
-
 
 app.use(
   cors({
