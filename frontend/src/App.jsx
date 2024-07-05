@@ -15,7 +15,7 @@ import AllAuthors from "./components/pages/AllAuthors";
 import { Context } from "./main";
 import axios from "axios";
 import UpdateBlog from "./components/pages/UpdateBlog";
-const backendUrl = process.env.BACKEND_URL;
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 const App = () => {
   const { setUser, isAuthenticated, setIsAuthenticated, user, setBlogs } =
