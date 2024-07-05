@@ -18,10 +18,6 @@ app.use((req, res, next) => {
   next();
 });
 
-const corsOptions = {
-  origin: 'http://localhost:5173', // Update this to match your frontend URL
-  credentials: true,
-};
 
 app.use(cors(corsOptions))
 
