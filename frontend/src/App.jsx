@@ -40,7 +40,7 @@ const App = () => {
     const fetchBlogs = async () => {
       try {
         const { data } = await axios.get(
-          axioms.get(`${backendUrl}/api/v1/blog/all`),
+          axios.get(`${backendUrl}/api/v1/blog/all`),
           { withCredentials: true }
         );
         setBlogs(data.allBlogs);
