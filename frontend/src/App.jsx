@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
 import "./App.css";
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../src/components/pages/Home";
 import About from "../src/components/pages/About";
@@ -25,7 +24,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const { data } = await axios.get(
-          axios.get(`https://blog-website-1-ymhw.onrender.com/api/v1/user/myprofile`),
+          axios.get(`${backendUrl}/api/v1/user/myprofile`),
           {
             withCredentials: true,
           }
@@ -41,7 +40,7 @@ const App = () => {
     const fetchBlogs = async () => {
       try {
         const { data } = await axios.get(
-          "https://blog-website-bay-six.vercel.app",
+          `${backendUrl}/api/v1/blog/all`,
           { withCredentials: true }
         );
         setBlogs(data.allBlogs);
